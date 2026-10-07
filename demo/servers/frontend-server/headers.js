@@ -11,5 +11,6 @@
 // frontend's own JS calls both cross-origin with fetch(). Without this, CSP
 // breaks the legitimate app too, not just the attack.
 module.exports = function cspHeaders(req, res, next) {
+  // use method res.setHeaders() cp. api-server/headers.js
   next();
 };

