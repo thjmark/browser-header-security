@@ -1,0 +1,16 @@
+{
+  "name": "security-headers-demo",
+  "private": true,
+  "workspaces": [
+    "servers/*"
+  ],
+  "scripts": {
+    "start:all": "concurrently -n login,api,frontend,evil -c blue,green,yellow,red \"npm run start -w servers/login-server\" \"npm run start -w servers/api-server\" \"npm run start -w servers/frontend-server\" \"npm run start -w servers/evil-server\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.0"
+  },
+  "overrides": {
+    "shell-quote": "^1.11.0"
+  }
+}

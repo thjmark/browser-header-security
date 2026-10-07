@@ -44,5 +44,6 @@ see gotcha #6 below. Full attack/fix detail, endpoints, and auth model: `demo/Ar
 
 ## Status
 
-Architecture fully designed and documented in `demo/Architecture.md`. Not yet
-implemented — no server code exists yet.
+Architecture documented in `demo/Architecture.md` and implemented: all four
+servers, `exercises/*.md`, and `solutions/` exist under `demo/`. From
+`demo/`, run `npm install` once, then `npm run start:all`.

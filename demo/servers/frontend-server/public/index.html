@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Secret Messageboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Secret Messageboard</h1>
+
+  <section id="login-section">
+    <h2>Log in</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="username" autocomplete="username" />
+      <input type="password" id="password" placeholder="password" autocomplete="current-password" />
+      <button type="submit">Log in</button>
+    </form>
+    <p id="login-status"></p>
+    <p class="hint">demo / demo</p>
+  </section>
+
+  <section id="board-section" hidden>
+    <h2>Messages</h2>
+    <button id="logout-btn" type="button">Log out</button>
+    <button id="refresh-btn" type="button">Refresh</button>
+    <ul id="message-list"></ul>
+
+    <h3>Add an entry</h3>
+    <form id="add-form">
+      <input type="text" id="entry-text" placeholder="Say something..." size="50" />
+      <button type="submit">Post</button>
+    </form>
+    <p id="add-status"></p>
+  </section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #222;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+.hint {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+#message-list {
+  list-style: none;
+  padding: 0;
+}
+
+#message-list li {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}
+
+input[type='text'],
+input[type='password'] {
+  padding: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+button {
+  padding: 0.3rem 0.8rem;
+}
+
+#login-status,
+#add-status {
+  color: #b00020;
+  min-height: 1.2em;
+}
