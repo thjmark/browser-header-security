@@ -50,11 +50,10 @@ Same-Origin Policy, CORS, Content Security Policy und andere Header
 - XEE
 - CSRF
 - Click jacking
-- Data leaks
 - man in the middle
 
 ---
-# Sicherheitsfeatures des browsers 
+# Sicherheitsfeatures des Browsers 
 - eine kurze Geschichte der Browsersicherheit
 	- http-> https
     - HSTS
@@ -62,6 +61,7 @@ Same-Origin Policy, CORS, Content Security Policy und andere Header
     - Same Origin/ CORS
     - Content Security Policy
     - Sonstige Header
+	- Fortgeschrittenes Sandboxing: COEP, CORP
   - ein paar Worte zu Cookies
 
 ---
