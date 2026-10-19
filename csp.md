@@ -35,7 +35,20 @@ Trusted types
  -  mit Content-Security-Policy-Report-Only kann man sich nur die Fehler anzeigen lassen
 
 
-  ## XSS
+## Sinnvolle Configuration
+
+Im Moment wird empfohlen das dies nicht der einzige xss schutz ist (defense in depth)
+Immer upgrade-insecure-request wenn möglich
+über Header
+
+
+- nur lokal: self
+- sources werden kontrolliert: hash strict
+- sources kommen von extern: nonce und strict-dynamic
+
+- trusted type ist noch nicht in jedem Browser -> später  nötig in vanillajs projekten oder für frameworkentwickler
+
+## XSS
 
    Beispiel:
 
