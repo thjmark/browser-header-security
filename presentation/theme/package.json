@@ -1,0 +1,19 @@
+{
+  "name": "slidev-theme-andrena",
+  "version": "1.0.0",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=0.48.0"
+  },
+  "slidev": {
+    "defaults": {
+      "fonts": {
+        "sans": "Nunito Sans"
+      },
+      "colorSchema": "light"
+    }
+  }
+}

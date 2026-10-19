@@ -1,0 +1,50 @@
+/* Default layout sizing */
+.slidev-layout {
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+}
+
+/* Override default theme's opacity-50 on h1 + p (designed for cover subtitles,
+   but incorrectly makes images/paragraphs after any slide heading semi-transparent) */
+.slidev-layout h1 + p {
+  opacity: 1 !important;
+  margin-top: 0;
+}
+
+/* Dark text for light backgrounds - body text only, let headers use default Slidev styles */
+.slidev-layout p,
+.slidev-layout li,
+.slidev-layout a {
+  color: #2d2d2d;
+}
+
+.slidev-layout a {
+  color: #0066cc;
+}
+
+.slidev-layout a:hover {
+  color: #0052a3;
+}
+
+/* Ensure code blocks are readable */
+.slidev-layout pre,
+.slidev-layout code {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+}
+
+/* Heading font sizes */
+.slidev-layout h1 {
+  font-size: 24pt;
+}
+
+.slidev-layout h2 {
+  font-size: 20pt;
+}
+
+.slidev-layout h3 {
+  font-size: 16pt;
+}
+
+
