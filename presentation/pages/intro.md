@@ -34,7 +34,7 @@ z.B.
 ### Ich stelle heute die wichtigsten Sicherheitsfeatures und welche Probleme sie lösen vor.
 insbesondere 
 - Same orgin Policy & CORS
-- Cookies und Einstellungen
+- Cookies und ihre Einstellungen
 - Content Security Policy
 - Sonstige Header
 - Fortgeschrittenes Sandboxing COOP,COEP,CORP
