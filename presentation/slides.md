@@ -16,15 +16,12 @@ duration: 70min
 ## Eine Übersicht über Security-Header
 ## Dr. Thorsten Jahrsetz
 ###  andrena objects ag
-
 ---
 src: ./pages/intro.md
 hide: false
 ---
----
 src: ./pages/sop_cors.md
 hide: false
----
 ---
 src: ./pages/cookies.md
 hide: false

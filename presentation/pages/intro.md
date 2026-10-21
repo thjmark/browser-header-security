@@ -1,42 +1,52 @@
 
 ---
-## seit frühzeit des Webs gibt es Sicherheisprobleme
+
+# Sicherheitsprobleme von Webapps
+
 z.B:
-- man in the middle
-- session stealing
-- Click jacking
+- man-in-the-middle-attacks
+- Data-leaks
+- session-stealing
+- Click-jacking
 - XEE
 - XSS
-- CORS leak
+- CORS-leak
 - CSRF
-- Data leaks
 
 ---
-
+layout: two-cols-header
+---
 ## Zum Glück gab es schon viele Fortschritte 
-z.B. 
--  http-> https
--  XML-> json + (Schließen von Sicherheitslücken)
--  bessere Popup schutz (TBD)
-- mechanismen zu säubern von unsicheren DOM Daten 
-    - frameworks
-- relativ sichere standart Implementierungen z.B. Spring
+ 
+Zum Beispiel
 
-- Browser haben inzwischen viele Sicherheitsfeatures die bei der Vermeidung von Sicherheitsprobleme helfen
+::left::
 
-- Für die korrekte Nutzung dieser Features muss man sie verstehen
-- (auch in Zeiten von KI muss man wissen wonach man fragt:-) ) 
+-  Encryption of traffic http-> https
+-  Ablösung von XML durch json & schließen von Sicherheitslücken in XML
+-  Implementierungen zum Sanitizen von unsicheren DOM Daten 
+-  bessere Popup Schutz
+-  relativ sichere Standartimplementierungen von relevanten Server/Client Funktionen z.B. Spring Boot, Frontend Frameworks
+
+::right::
+
+Browser haben inzwischen viele Sicherheitsfeatures die bei der Vermeidung von Sicherheitsprobleme helfen
+
+Für die korrekte Nutzung dieser Features muss man sie verstehen
+
+auch in Zeiten von KI muss man wissen wonach man fragen soll `:-)` 
 
 ---
 
-## Browser  Sicherheitsfeatures (sichere Headers)
+## Header gesteuerte Browser  Sicherheitsfeatures
 
-### Ich stelle heute die wichtigsten Sicherheitsfeatures und welche Probleme sie lösen vor.
+Ich stelle heute die wichtigsten Sicherheitsfeatures und welche Probleme sie lösen vor.
+
 insbesondere 
-- Same orgin Policy & CORS
+- Same Orgin Policy & CORS
 - Cookies und ihre Einstellungen
 - Content Security Policy
 - Sonstige Header
-- Fortgeschrittenes Sandboxing COOP,COEP,CORP
+- Cross Origin Isolation
 
 

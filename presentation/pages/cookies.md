@@ -1,54 +1,48 @@
 
 ---
+layout: two-cols-header
+---
+
 # Ein paar Worte zu Cookie Einstellungen
-
 - Cookies sind Datenstückchen im Browser gespeichert
-- werden von Server gesetzt um State zu transportieren
-  - mit Set-Cookie
-
-- Wichtige Security Einstellungen sind:
+- werden von Server gesetzt um State zu transportieren (Set-Cookie Header)
+- Secrets müssen nicht in Cookies abgelegt werden: SSO - Auth token in JS Variable, Refresh Token in cookie
+### Wichtige Security Einstellungen:
+::left::
   - Wer kann auf die Cookiers zugreifen?
     - HttpOnly(js kann nicht auf cookie zugreifen)
     - SameSite: regelt für welchen host die cookies mitgeschickt werden
       - Strict (nur selbe seite)
       - Lax(nur bei GET und top level navigation und der selben seite(port ist egal) )
       - None 
+::right::
   - Wie werden die Cookies übertragen?
     - Secure (https only)
   - Wie werden sie gespeichert?
     - Partitioned  (isolation von cookies von embeddedten seiten)
   - (Wie lange leben sie? , maxAge....)
 
-  (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie)
-
   
-  #### Bei SSO wird der Auth token i.d.R. in JS variable gespeichert und kann nicht so geleakt werden. Es gibt aber einen Refresh cookie
 
 ---
 
-# Wozu ist das wichtig? CSRF
+# Wozu ist das wichtig? z.B. CSRF(CWE-352)
 
-  - Nutzer geht wieder auf Message board und loggt sich ein
-  - api server hat cors schutz an
-  - böse seite schickt "einfachen" POST request and dashboard
-  - request verändert zustand (auch wenn die Antwort dann durch CORS blockirt wird)
+  - Nutzer geht wieder auf Forum und loggt sich ein
+  - API Server hat Cors schutz an
+  - Nutzer besucht böse Seite
+  - Böse seite schickt "einfachen" POST request an Forum
+  - request verändert zustand (auch wenn die Antwort dann durch CORS blockiert wird)
 
   - neben SAME site cookie policy können auch sog CSRF token helfen
-  - CSRF Token: nonces, als unsichtbares Formularfeld mitgeschickt und auf dem server getestet 
+  - besser: Wenn unsichere Post nötig:
+    - CSRF Token: nonces über unsichtbares Formularfeld/ test des nonce auf Server 
 
 
 
 ---
 
-  # Übung 2
-
-  Übung2
-
----
-
----
-
-## Wogegen das Schützt Data leaks
+## Wogegen das noch schützt: Data leaks
   Beispiel:
   - in frontend können in den posts bilder eingebunden werden und es gibt xss
   - die Cookies sind über js erreichbar
@@ -56,6 +50,8 @@
   - HttpOnly Cookies sind so nicht auslesbar
 
 ---
-# Übung 3
+
+# Übungen
+Übung2
 Übung 3(a)
 ---

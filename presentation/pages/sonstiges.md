@@ -1,10 +1,9 @@
 
----
-layout: two-cols-header
----
-# Sonstige header mit security Verbindung
 
-::left::
+---
+
+# Sonstige Header mit Security Bezug 1
+
 
 - Deprecated header
   - X-XSS-Protection: 0
@@ -19,11 +18,12 @@ layout: two-cols-header
 - Immer
   - Content-Type: text/html; charset=UTF-8
 
+---
 
-::right::
+# Sonstige Header mit Security Bezug 2
 
 - HTTPS
-- Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   - blocks all non encrypted traffic
   - status is stored in browser (can be sniffed i.e. can lead to data leaks)
 
@@ -37,19 +37,26 @@ layout: two-cols-header
 
 
 
-https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
-https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy
-
 
 ---
 
-# Specter und fortgeschrittene Isolation (Cross origin isolation) (CWE-1342)
+# Specter(CWE-1342) und Cross Origin Isolation 
 
 Spekulative Ausführung erlaubte auslesen allen speichers in einem Kontext
+
+
 Schutz bessere Isolation (cross origin isolation)
 
-Bestimmte APIS können nur noch mit Activem CORP mechanismus verwendet werden
+JS-API die Cross origin isolation brauchen (sonst abgeschaltet)
+- SharedArrayBuffer
+- Performance.now()
+- Performance.measureUserAgentSpecificMemory() 
 
+Externe High-performance frameworks/web apps
+
+---
+
+# Cross Origin Isolation Header 
 
 ### COOP
 - Damit tabs keinen Kontext teilen(What it is: COOP controls how your page relates to other tabs or windows.)
@@ -69,7 +76,7 @@ Bestimmte APIS können nur noch mit Activem CORP mechanismus verwendet werden
 
 - Browser haben inzwischen viele gute Sicherheitsfunktionen
 - Über Header kann die Sicherheit von Webanwendungen deutlich gesteigert werden
-- Sichere defaults erfordern verstehen der Mechanismen für unsicher z.B. Dev Umgebungen
+- Sichere defaults erfordern verstehen der Mechanismen z.B. für Dev-Umgebungen
 - Mit guter Konfiguration können viele Angriffszenarien geblockt werden e.g.
   - Missbrauch von Sessions (CSRF(CWE-352), CORS-Data leak(CWE-942))
   - Weitergabe von sensiblen Information (z.B. Seitenbesuch) (CWE-200)
@@ -80,3 +87,26 @@ Bestimmte APIS können nur noch mit Activem CORP mechanismus verwendet werden
 
 Aufmerksamkeit lohnt sich!
 
+
+---
+# Quellen
+
+#### Cookies
+ - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie
+
+#### CSP
+
+- https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy
+
+##### Trusted types
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for
+
+#### Security Header
+- https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+- https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy
+
+#### Cross origin isolation
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy
+- https://developer.mozilla.org/en-US/docs/Web/API/Window/crossOriginIsolated
+- https://furkanbaytekin.dev/blogs/what-are-coop-coep-and-corp-headers-and-why-browsers-needed-them
