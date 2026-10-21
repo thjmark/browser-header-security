@@ -23,7 +23,7 @@ Grundlegende Struktur z.B.:
 `Content-Security-Policy: default-src 'self'; img-src 'self' cdn.example.com;`
 
 - Allgemein
-  - upgrade-insecure-request
+  - upgrade-insecure-requests
 - Resources: Was wird kontrolliert?
     - default-src
     - img-src
@@ -36,7 +36,7 @@ Grundlegende Struktur z.B.:
 - Ziele: Was darf verwendet werden ? (kann kombiniert werden)
     - none
     - self
-    - nonce( set in html tag (integrity attribute) + header start with `'nonce-<base64>'`)
+    - nonce( set in html tag (nonce attribute) + header start with `'nonce-<base64>'`)
     - hash (start with `'sha256-<base64>`)
     - url based allow list
     - unsafe-inline....
@@ -64,7 +64,7 @@ Trusted types
 
 ### Allgemein
 Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz ist (defense in depth)
-- Immer upgrade-insecure-request wenn möglich
+- immer `upgrade-insecure-requests wenn möglich
 - setzen über Header
 
 ### Je nach Anwendung

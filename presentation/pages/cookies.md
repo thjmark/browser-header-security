@@ -10,16 +10,16 @@ layout: two-cols-header
 ### Wichtige Security Einstellungen:
 ::left::
   - Wer kann auf die Cookiers zugreifen?
-    - HttpOnly(js kann nicht auf cookie zugreifen)
+    - HttpOnly(js kann nicht auf Cookie zugreifen)
     - SameSite: regelt für welchen host die cookies mitgeschickt werden
-      - Strict (nur selbe seite)
-      - Lax(nur bei GET und top level navigation und der selben seite(port ist egal) )
+      - Strict (nur selbe Seite)
+      - Lax - default in Browser (nur bei GET und Top Level Navigation und der selben Seite (Port ist egal) )
       - None 
 ::right::
   - Wie werden die Cookies übertragen?
     - Secure (https only)
   - Wie werden sie gespeichert?
-    - Partitioned  (isolation von cookies von embeddedten seiten)
+    - Partitioned  (Isolation von Cookies von embeddedten Elementen)
   - (Wie lange leben sie? , maxAge....)
 
   

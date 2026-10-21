@@ -11,13 +11,12 @@
 
 - Data leak header
   - Server: webserver
-  - X-Content-Type-Options: nosniff
   - X-Powered-By
   - Referrer-Policy: strict-origin-when-cross-origin (welche Information werden an den Request gehängt)
 
-- Immer
+- Sonstiges (immer sinnvoll)
   - Content-Type: text/html; charset=UTF-8
-
+  - X-Content-Type-Options: nosniff
 ---
 
 # Sonstige Header mit Security Bezug 2
@@ -40,7 +39,7 @@
 
 ---
 
-# Specter(CWE-1342) und Cross Origin Isolation 
+# Spectre (CWE-1342) und Cross Origin Isolation 
 
 Spekulative Ausführung erlaubte auslesen allen speichers in einem Kontext
 
@@ -78,7 +77,7 @@ Externe High-performance frameworks/web apps
 - Über Header kann die Sicherheit von Webanwendungen deutlich gesteigert werden
 - Sichere defaults erfordern verstehen der Mechanismen z.B. für Dev-Umgebungen
 - Mit guter Konfiguration können viele Angriffszenarien geblockt werden e.g.
-  - Missbrauch von Sessions (CSRF(CWE-352), CORS-Data leak(CWE-942))
+  - Cross Domain Leaks (CSRF(CWE-352), CORS-Data leak(CWE-942))
   - Weitergabe von sensiblen Information (z.B. Seitenbesuch) (CWE-200)
   - Cross site scripting XSS (CWE-79)
   - (Clickjacking CWE-1021)
@@ -90,6 +89,9 @@ Aufmerksamkeit lohnt sich!
 
 ---
 # Quellen
+
+#### CORS
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 
 #### Cookies
  - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie

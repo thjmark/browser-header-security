@@ -10,7 +10,7 @@
     - Wenn alle eigenschaften erfüllt sind wird der Request vom Browser durchgelassen.
 - per default bei allen Browsern an
 
-- fremde APIs nur mit CrossOriginRequestSharing Header
+- fremde APIs nur mit Cross-Origin Resource Sharing Header
 
 ---
 layout: two-cols-header
@@ -18,13 +18,13 @@ layout: two-cols-header
 
 # CORS GET/HEAD
 
-Seitenübergreifenden API-Zugriffe gehen über CrossOriginRequestSharing
+Seitenübergreifenden API-Zugriffe gehen über Cross-Origin Resource Sharing
 
 ::left::
 - Browser sendet request mit origin header (und schickt ggf Cookie mit)
 - Server schickt Access-Control-Header zurück die dem Browser mitteilen von welcher url auf Server resourcen zugegriffen werden kann.
 - Wenn request nicht durch kommt -> Antwort blockiert und  Type Error (der Fehler wird allerdings in der Console ausgegeben)
-- POST requests mit Content type application/x-www-form-urlencoded,multipart/form-data oder text/plain werden wie GET behandelt
+- POST requests mit Content type application/x-www-form-urlencoded,multipart/form-data oder text/plain funktionieren auch ohne preflight s.u.
 
 ::right::
 Headers:
@@ -32,6 +32,7 @@ Headers:
 - Access-Control-Allow-Origin: https://myweb.app:6768
 - Access-Control-Allow-Methods `GET,...`
 - Access-Control-Allow-Headers
+- Access-Control-Allow-Credentials: true
 - Access-Control-Max-Age
 
 Auch mehrere verschiedene Ziele/ Methoden möglich
@@ -54,24 +55,37 @@ GRAPH
 
 
 
-
-Quelle(https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
-
 ---
 
 # Wogegen schützt die SOP: CORS Data leaks
 
-SCHAUBILD
 Beispiel
-- Wir haben eine Seite (Frontend) bei der man sich einloggt (über einen extra server) 
-- der login server gibt ein (unsicheren) http only cookie zurück 
-- das frontend schickt den Cookie an einen API server weiter um post einzusehen oder einen hinzufügen
+- Nutzer geht auf Forum bei der man sich einloggt (über einen extra Server) 
+- der Login Server gibt ein (unsicheren) Http-only-Cookie zurück 
+- das Forum zeigt bestehende Posts an (über API Anfrage)
+- Nutzer geht auf böse Seite
+- böse Seite schickt API Anfrage an Backend des Forums(mit dem login Cookie) und bekommt Antwort (die sie dann z.B. irgendwo speichern könnte)
 
-- Wenn der Nutzer auch auf eine feindliche Seite geht (z.B. durch phishing link). Kann diese Seite etwas auf den Board posten
+- richtig gesetzte CORS Header (oder die defaults)
 
 ---
 
-# 1. Übung
+---
+
+# Wozu ist das wichtig? z.B. CSRF(CWE-352)
+
+  - Nutzer geht wieder auf Forum und loggt sich ein
+  - API Server hat Cors schutz an
+  - Nutzer besucht böse Seite
+  - Böse seite schickt "einfachen" POST request an Forum
+  - request verändert zustand (auch wenn die Antwort dann durch CORS blockiert wird)
+
+  - richtig gesetzte CORS header verhindern über OPTIONS preflight viele POST requests s.o.
+
+---
+
+# Übungen
 
 - 1. Übung
+- 2. Übung(a)
 
