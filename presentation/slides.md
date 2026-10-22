@@ -30,7 +30,6 @@ hide: false
 src: ./pages/csp.md
 hide: false
 ---
----
 src: ./pages/sonstiges.md
 hide: false
 ---

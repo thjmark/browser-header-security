@@ -12,8 +12,8 @@ layout: two-cols-header
   - Wer kann auf die Cookiers zugreifen?
     - HttpOnly(js kann nicht auf Cookie zugreifen)
     - SameSite: regelt für welchen host die cookies mitgeschickt werden
-      - Strict (nur selbe Seite)
-      - Lax - default in Browser (nur bei GET und Top Level Navigation und der selben Seite (Port ist egal) )
+      - Strict (nur selbe Seite (Port ist egal))
+      - Lax - default in Browser (GET,Top Level Navigation, selbe Seite  )
       - None 
 ::right::
   - Wie werden die Cookies übertragen?
@@ -29,12 +29,12 @@ layout: two-cols-header
 # Wozu ist das wichtig? z.B. CSRF(CWE-352)
 
   - Nutzer geht wieder auf Forum und loggt sich ein
-  - API Server hat Cors schutz an
+  - API Server hat Cors Schutz an
   - Nutzer besucht böse Seite
-  - Böse seite schickt "einfachen" POST request an Forum
+  - Böse Seite schickt "einfachen" POST request an Forum
   - request verändert zustand (auch wenn die Antwort dann durch CORS blockiert wird)
 
-  - neben SAME site cookie policy können auch sog CSRF token helfen
+  - SAME site cookie policy hilft hier
   - besser: Wenn unsichere Post nötig:
     - CSRF Token: nonces über unsichtbares Formularfeld/ test des nonce auf Server 
 
@@ -44,14 +44,15 @@ layout: two-cols-header
 
 ## Wogegen das noch schützt: Data leaks
   Beispiel:
-  - in frontend können in den posts bilder eingebunden werden und es gibt xss
+  - in Forum in den posts Bilder eingebunden werden und es gibt xss
   - die Cookies sind über js erreichbar
-  - Angreifer kann auf Forum Bild auf bösem Server posten an das als zusatzinfo der Cookie angehängt wird
+  - Angreifer kann auf Forum Bild auf bösem Server posten. Über extra Path parameter kann z.B. der Cookie angehängt wird
   - HttpOnly Cookies sind so nicht auslesbar
 
 ---
 
 # Übungen
-Übung2
-Übung 3(a)
+- Übung2
+- Übung 3(a)
+
 ---

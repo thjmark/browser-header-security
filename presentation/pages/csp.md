@@ -47,7 +47,7 @@ Konfiguration kann sehr kompliziert sein!
  -  Content-Security-Policy-Report-Only Fehler loggen aber nicht blocken
 
 ---
-# CSP experimental features
+# CSP Trusted types
 
 Trusted types
   - mit trusted types kann festgelegt werden das daten vor dem schreiben auf unsichere dom senke sanitized werden müssen
@@ -60,7 +60,7 @@ Trusted types
 
 ---
 
-# CSP: Sinnvolle Configuration
+# CSP: Sinnvolle Konfiguration
 
 ### Allgemein
 Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz ist (defense in depth)
@@ -76,7 +76,7 @@ Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz
 
 ---
 
-## Wogegen das schützt: Data leaks
+## Wogegen das schützt: Data Leaks
   Beispiel:
   - ein Angreifer fügt einen Post hinzu der auf ein Bild auf dem bösen Server zeigt
   - User besucht das Forum und lädt das Bild
@@ -99,8 +99,8 @@ Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz
 
 ---
 
-## Übungungen
+## Übungen
 
-Übung 3b
-Übung 4
+- Übung 3b
+- Übung 4
 ---
