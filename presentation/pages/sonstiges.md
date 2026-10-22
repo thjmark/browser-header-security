@@ -74,7 +74,7 @@ Externe High-Performance Frameworks/Web apps
 Es gibt online Tools mit denen die Header-Einstellungen getestet werden können. z.B.:
 
 - https://developer.mozilla.org/en-US/observatory Analyse von Online Seiten Überblick
-- https://headertest.com/ - Analyse von Online Seiten (detailiert)
+- https://headertest.com/ - Analyse von Online Seiten (detailliert)
 - https://csp-evaluator.withgoogle.com/ - nur CSP Einstellungen
 
 ---
@@ -84,7 +84,7 @@ Es gibt online Tools mit denen die Header-Einstellungen getestet werden können.
 - Browser haben inzwischen viele gute Sicherheitsfunktionen
 - Über Header kann die Sicherheit von Webanwendungen deutlich gesteigert werden
 - Sichere defaults erfordern verstehen der Mechanismen z.B. für Dev-Umgebungen
-- Mit guter Konfiguration können viele Angriffszenarien geblockt werden e.g.
+- Mit guter Konfiguration können viele Angriffsszenarien geblockt werden e.g.
   - Cross Domain Leaks (CSRF(CWE-352), CORS-Data leak(CWE-942))
   - Weitergabe von sensiblen Information (z.B. Seitenbesuch) (CWE-200)
   - Cross site scripting XSS (CWE-79)

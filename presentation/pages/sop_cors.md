@@ -47,7 +47,7 @@ Bei State veränderten Request wie POST: vor dem Request - OPTIONS-Request d.h.
 
     - OPTIONS-Request
     - Server antwortet mit Access-Control-Header  
-    - hat Antwort auf OPTIONS-Request passende Access-Controll-Header wird POST/PUT/DELETE-Request losgeschickt 
+    - hat Antwort auf OPTIONS-Request passende Access-Control-Header wird POST/PUT/DELETE-Request losgeschickt 
     - sonst wird request blockiert und unspezifischer Fehler zurückgegeben (und in console erklärt)  
 
 

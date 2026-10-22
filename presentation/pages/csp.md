@@ -2,7 +2,7 @@
 
 ## Content Security Policy
 
-Die Content Security Policy zentraliersiert viele Sicherheitseinstellungen für Webseiten
+Die Content Security Policy zentralisiert viele Sicherheitseinstellungen für Webseiten
 
 - CSP steuert:
   - welche Resourcen geladen, embedded oder ausgeführt werden können
@@ -64,7 +64,7 @@ Trusted types
 
 ### Allgemein
 Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz ist (defense in depth)
-- immer `upgrade-insecure-requests wenn möglich
+- immer `upgrade-insecure-requests` wenn möglich
 - CSP setzen über Header
 
 ### Je nach Anwendung
@@ -92,10 +92,10 @@ Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz
 
   - Frontend hat XSS Verwundbarkeit (Forumsbeiträge werden direkt als Html gerendert)
   - Angreifer postet Beitrag mit z.B. `<img src="notexisting" onError="...evil js code.."/>`
-    - Code z.B. fremde Scripte, Daten stehlen und für Exfilteration externes Bild aufrufen,...
+    - Code z.B. fremde Scripte, Daten stehlen und für Exfiltration externes Bild aufrufen,...
   - User öffnet Forum - Code wird ausgeführt
 
-  - Sicheren CSP Headern können ausführen von nichtauthorisiertem JS-Code blocken
+  - Sicheren CSP Headern können ausführen von nicht autorisiertem JS-Code blocken
 
 ---
 

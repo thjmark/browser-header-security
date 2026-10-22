@@ -25,7 +25,7 @@ Zum Beispiel
 -  Ablösung von XML durch json & schließen von Sicherheitslücken in XML
 -  Implementierungen zum Sanitizen von unsicheren DOM Daten 
 -  bessere Popup Schutz
--  relativ sichere Standartimplementierungen von relevanten Server/Client Funktionen z.B. Spring Boot, Frontend Frameworks
+-  relativ sichere Standardimplementierungen von relevanten Server/Client Funktionen z.B. Spring Boot, Frontend Frameworks
 
 ::right::
 
@@ -42,7 +42,7 @@ auch in Zeiten von KI muss man wissen wonach man fragen soll `:-)`
 Ich stelle heute die wichtigsten Sicherheitsfeatures und welche Probleme sie lösen vor.
 
 insbesondere 
-- Same Orgin Policy & CORS
+- Same Origin Policy & CORS
 - Cookies und ihre Einstellungen
 - Content Security Policy
 - Sonstige Header

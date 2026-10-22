@@ -8,7 +8,7 @@ layout: two-cols-header
 - Secrets müssen nicht in Cookies abgelegt werden: SSO - Auth token in JS Variable, Refresh Token in cookie
 ### Wichtige Security Einstellungen:
 ::left::
-  - Wer kann auf die Cookiers zugreifen?
+  - Wer kann auf die Cookies zugreifen?
     - HttpOnly(js kann nicht auf Cookie zugreifen)
     - SameSite: regelt für welchen host die cookies mitgeschickt werden
       - Strict (nur selbe Seite (Port ist egal))
@@ -18,7 +18,7 @@ layout: two-cols-header
   - Wie werden die Cookies übertragen?
     - Secure (https only)
   - Wie werden sie gespeichert?
-    - Partitioned  (Isolation von Cookies von embeddedten Elementen)
+    - Partitioned  (Isolation von Cookies von embedded Elementen)
   - (Wie lange leben sie? , maxAge....)
 
   
@@ -45,7 +45,7 @@ layout: two-cols-header
   Beispiel:
   - in Forum gibt es XSS Lücke
   - die Cookies sind über js erreichbar
-  - Angreifer kann auf Forum Javascript Code einbinden das den Logincookie ausliest und ihn (z.B. über Bildlink) an den bösem Server weiterleitet.
+  - Angreifer kann auf Forum Javascript Code einbinden das den Logincookie ausliest und ihn (z.B. über Bildlink) an den bösen Server weiterleitet.
   - User besucht das Forum, der JS-Code wird ausgelesen und der Cookie gestohlen
   - HttpOnly Cookies sind so nicht auslesbar
 
