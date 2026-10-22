@@ -1,0 +1,5 @@
+import{L as e,T as t,Y as n,_ as r,g as i,gt as a,mt as o}from"./modules/shiki-uDCstWv5.js";import{et as s,tt as c}from"./index-DC_LlHW-.js";import{t as l}from"./slidev/default-77SkwSLc.js";var u={__name:`sop_cors.md__slidev_7`,setup(u){let{$slidev:d,$nav:f,$clicksContext:p,$clicks:m,$page:h,$renderContext:g,$frontmatter:_}=c();return p.setup(),(c,u)=>(e(),r(l,a(t(o(s)(o(_),6))),{default:n(()=>[...u[0]||=[i(`h1`,null,`CORS POST/PUT/DELETE`,-1),i(`p`,null,`Bei State-verändernden Requests wie POST: vor dem Request - OPTIONS-Request d.h.`,-1),i(`pre`,null,[i(`code`,null,`- OPTIONS-Request
+- Server antwortet mit Access-Control-Header  
+- hat Antwort auf OPTIONS-Request passende Access-Control-Header wird POST/PUT/DELETE-Request losgeschickt 
+- sonst wird request blockiert und unspezifischer Fehler zurückgegeben (und in console erklärt)
+`)],-1)]]),_:1},16))}};export{u as default};
