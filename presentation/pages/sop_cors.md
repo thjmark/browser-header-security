@@ -92,5 +92,4 @@ npm run start:all
 
 #### TODO
 - 1. Übung (am besten nach dem Lösen resetten)
-- 2. Übung(a) Löse CSRF mit CORS Headern
 

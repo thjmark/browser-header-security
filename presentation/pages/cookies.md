@@ -64,7 +64,7 @@ npm run start:all
 
 #### TODO
 
-- Übung 2 (mit SAME Site lösen)
+- Übung 2
 - Übung 3(a)
 
 ---
