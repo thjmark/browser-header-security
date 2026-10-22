@@ -12,5 +12,6 @@
 // breaks the legitimate app too, not just the attack.
 module.exports = function cspHeaders(req, res, next) {
   // use method res.setHeaders() cp. api-server/headers.js
+  res.setHeader("Content-Security-Policy", "img-src 'self'")
   next();
 };

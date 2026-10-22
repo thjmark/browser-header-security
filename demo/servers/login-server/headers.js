@@ -10,7 +10,7 @@
 // localhost/127.0.0.1 as secure contexts.
 module.exports = {
   cookieOptions: {
-    httpOnly: false,
+    httpOnly: true,
     secure: true,
     sameSite: 'none',
   },
