@@ -12,7 +12,7 @@
 module.exports = function corsHeaders(req, res, next) {
   const origin = req.headers.origin;
   if (origin) {
-    res.setHeader('Access-Control-Allow-Origin', origin); // VULNERABLE: reflects any origin
+    res.setHeader('Access-Control-Allow-Origin', "http://localhost:3000"); // VULNERABLE: reflects any origin
   }
   res.setHeader('Access-Control-Allow-Credentials', 'true');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');

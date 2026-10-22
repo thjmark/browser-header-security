@@ -12,6 +12,6 @@ module.exports = {
   cookieOptions: {
     httpOnly: false,
     secure: true,
-    sameSite: 'none',
+    sameSite: 'lax',
   },
 };
