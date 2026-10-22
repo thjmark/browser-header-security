@@ -12,5 +12,9 @@
 // breaks the legitimate app too, not just the attack.
 module.exports = function cspHeaders(req, res, next) {
   // use method res.setHeaders() cp. api-server/headers.js
+  res.setHeader(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self'; connect-src 'self' http://localhost:4000 http://localhost:4001"
+  )
   next();
 };
