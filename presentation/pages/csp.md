@@ -68,7 +68,7 @@ Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz
 - CSP setzen über Header
 
 ### Je nach Anwendung
-- nur Lokal: self
+- nur Lokal, ohne Uploads, kein Jsonp: self
 - Sources werden kontrolliert: hash strict
 - Sources kommen von extern: nonce und strict-dynamic
 

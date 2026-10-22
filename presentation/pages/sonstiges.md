@@ -69,6 +69,16 @@ Externe High-Performance Frameworks/Web apps
 
 ---
 
+# Tools
+
+Es gibt online Tools mit denen die Header-Einstellungen getestet werden können. z.B.:
+
+- https://developer.mozilla.org/en-US/observatory Analyse von Online Seiten Überblick
+- https://headertest.com/ - Analyse von Online Seiten (detailiert)
+- https://csp-evaluator.withgoogle.com/ - nur CSP Einstellungen
+
+---
+
 # Zusammenfassung und Ausblick
 
 - Browser haben inzwischen viele gute Sicherheitsfunktionen

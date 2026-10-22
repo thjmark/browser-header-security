@@ -34,7 +34,7 @@ Headers:
 - Access-Control-Allow-Credentials: true
 - Access-Control-Max-Age
 
-Auch mehrere verschiedene Ziele/ Methoden möglich
+Auch mehrere verschiedene Ziele / Methoden möglich
 
 
 
@@ -43,13 +43,11 @@ Auch mehrere verschiedene Ziele/ Methoden möglich
 # CORS POST/PUT/DELETE
 
 
-Bei server veränderten Request wie POST wird oft vor dem request ein OPTIONS request losgeschickt d.h.
+Bei State veränderten Request wie POST: vor dem Request - OPTIONS-Request d.h.
 
-GRAPH
-
-    - OPTIONS Request
-    - Server antwortet mit Access-Control- header  
-    - hat Antwort auf OPTIONS request passende Access-Controll header wird post/put/delete request losgeschickt 
+    - OPTIONS-Request
+    - Server antwortet mit Access-Control-Header  
+    - hat Antwort auf OPTIONS-Request passende Access-Controll-Header wird POST/PUT/DELETE-Request losgeschickt 
     - sonst wird request blockiert und unspezifischer Fehler zurückgegeben (und in console erklärt)  
 
 
