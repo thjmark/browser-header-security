@@ -3,14 +3,14 @@
 # Sonstige Header mit Security Bezug 1
 
 
-- Deprecated header
+- Deprecated Header
   - X-XSS-Protection: 0
 
 
-- Data leak header
+- Data-Leak Header
   - Server: webserver
   - X-Powered-By
-  - Referrer-Policy: strict-origin-when-cross-origin (welche Information werden an den Request gehängt)
+  - Referrer-Policy: strict-origin-when-cross-origin (welche Informationen werden an den Request gehängt)
 
 - Sonstiges (immer sinnvoll)
   - Content-Type: text/html; charset=UTF-8
@@ -21,8 +21,8 @@
 
 - HTTPS
   - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-    - blocks all non encrypted traffic
-    - status is stored in browser (can be sniffed i.e. can lead to data leaks)
+    - blocks all non-encrypted traffic
+    - status is stored in the browser (can be sniffed e.g. can lead to data leaks)
 
 - Sonstiges
   - Cache-Control 
@@ -39,41 +39,41 @@
 
 # Spectre (CWE-1342) und Cross Origin Isolation 
 
-Spekulative Ausführung erlaubte auslesen allen speichers in einem Kontext
+Spekulative Ausführung erlaubte das Auslesen des gesamten Speichers in einem Kontext
 
 
-Schutz bessere Isolation (cross origin isolation)
+Schutz: bessere Isolation (cross origin isolation)
 
-JS-API die Cross origin isolation brauchen (sonst abgeschaltet)
+JS-APIs die Cross-Origin-Isolation brauchen (sonst abgeschaltet)
 - SharedArrayBuffer
 - Performance.now()
 - Performance.measureUserAgentSpecificMemory() 
 
-Externe High-Performance Frameworks/Web apps
+Externe High-Performance Frameworks/Web-Apps
 
 ---
 
 # Cross Origin Isolation Header 
 
 ### COOP
-- Damit tabs keinen Kontext teilen
+- Damit Tabs keinen Kontext teilen
 - Cross-Origin-Opener-Policy: same-origin
 
 ### COEP
 - Kontrolliert was embedded werden kann
-- Cross-Origin-Embedder-Policy: require-corp  (richtigen CORP header oder CORS korrekt)
+- Cross-Origin-Embedder-Policy: require-corp  (richtigen CORP Header oder CORS korrekt)
 
 ## CORP
-- Wer darf resource nutzen (kommt von resource)
+- Wer darf Ressource nutzen (kommt von Ressource)
 - Cross-Origin-Resource-Policy: same-origin
 
 ---
 
 # Tools
 
-Es gibt online Tools mit denen die Header-Einstellungen getestet werden können. z.B.:
+Es gibt Online-Tools mit denen die Header-Einstellungen getestet werden können. z.B.:
 
-- https://developer.mozilla.org/en-US/observatory Analyse von Online Seiten Überblick
+- https://developer.mozilla.org/en-US/observatory Analyse von Online-Seiten (Überblick)
 - https://headertest.com/ - Analyse von Online Seiten (detailliert)
 - https://csp-evaluator.withgoogle.com/ - nur CSP Einstellungen
 
@@ -83,14 +83,14 @@ Es gibt online Tools mit denen die Header-Einstellungen getestet werden können.
 
 - Browser haben inzwischen viele gute Sicherheitsfunktionen
 - Über Header kann die Sicherheit von Webanwendungen deutlich gesteigert werden
-- Sichere defaults erfordern verstehen der Mechanismen z.B. für Dev-Umgebungen
+- Sichere Defaults erfordern das Verstehen der Mechanismen z.B. für Dev-Umgebungen
 - Mit guter Konfiguration können viele Angriffsszenarien geblockt werden e.g.
-  - Cross Domain Leaks (CSRF(CWE-352), CORS-Data leak(CWE-942))
-  - Weitergabe von sensiblen Information (z.B. Seitenbesuch) (CWE-200)
+  - Cross Domain Leaks (CSRF (CWE-352), CORS-Data-Leak (CWE-942))
+  - Weitergabe von sensiblen Informationen (z.B. Seitenbesuch) (CWE-200)
   - Cross site scripting XSS (CWE-79)
   - (Clickjacking CWE-1021)
 
-- Zusätzliche Sicherheitsfunktionen wie z.B. Cross Origin Isolation oder die trusted type api kommen kontinuierlich dazu
+- Zusätzliche Sicherheitsfunktionen wie z.B. Cross Origin Isolation oder die Trusted Types API kommen kontinuierlich dazu
 
 Aufmerksamkeit lohnt sich!
 

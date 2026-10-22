@@ -1,12 +1,12 @@
 ---
 
 # Same Origin Policy
-- Mit welchen Hosts interagieren -  fetch (bzw XMLHttpRequest) 
+- Mit welchen Hosts interagieren - fetch (bzw. XMLHttpRequest) 
 - Mechanismus im Browser der Operationen bzw. ihre Antworten ggf. blockiert
 - Notwendig damit fremde Webseiten keine Calls zu fremden Backends machen können
 
-- Same origin ist: selbes Protokoll (z.B. http, https), selbe domain, selber port wie Webseite
-    - Wenn alle eigenschaften erfüllt sind wird der Request vom Browser durchgelassen.
+- Same origin ist: selbes Protokoll (z.B. http, https), selbe Domain, selber Port wie Webseite
+    - Wenn alle Eigenschaften erfüllt sind wird der Request vom Browser durchgelassen.
 - per default bei allen Browsern an
 
 - fremde APIs nur mit Cross-Origin Resource Sharing Header
@@ -21,9 +21,9 @@ Seitenübergreifenden API-Zugriffe gehen über Cross-Origin Resource Sharing
 
 ::left::
 - Browser sendet request mit origin header (und schickt ggf Cookie mit)
-- Server schickt Access-Control-Header zurück die dem Browser mitteilen von welcher url auf Server resourcen zugegriffen werden kann.
-- Wenn request nicht durch kommt -> Antwort blockiert und  Type Error (der Fehler wird allerdings in der Console ausgegeben)
-- POST requests mit Content type application/x-www-form-urlencoded,multipart/form-data oder text/plain funktionieren auch ohne preflight s.u.
+- Server schickt Access-Control-Header zurück die dem Browser mitteilen von welcher URL auf Server-Ressourcen zugegriffen werden kann.
+- Wenn Request nicht durch kommt -> Antwort blockiert und Type Error (der Fehler wird allerdings in der Console ausgegeben)
+- POST requests mit Content-Type application/x-www-form-urlencoded, multipart/form-data oder text/plain funktionieren auch ohne preflight s.u.
 
 ::right::
 Headers:
@@ -43,7 +43,7 @@ Auch mehrere verschiedene Ziele / Methoden möglich
 # CORS POST/PUT/DELETE
 
 
-Bei State veränderten Request wie POST: vor dem Request - OPTIONS-Request d.h.
+Bei State-verändernden Requests wie POST: vor dem Request - OPTIONS-Request d.h.
 
     - OPTIONS-Request
     - Server antwortet mit Access-Control-Header  
@@ -57,11 +57,11 @@ Bei State veränderten Request wie POST: vor dem Request - OPTIONS-Request d.h.
 # Wogegen schützt die SOP: CORS Data leaks
 
 Beispiel
-- Nutzer geht auf Forum bei der man sich einloggt (über einen extra Server) 
+- Nutzer geht auf Forum bei dem man sich einloggt (über einen extra Server) 
 - der Login Server gibt ein (unsicheren) Http-only-Cookie zurück 
 - das Forum zeigt bestehende Posts an (über API Anfrage)
 - Nutzer geht auf böse Seite
-- böse Seite schickt API Anfrage an Backend des Forums(mit dem login Cookie) und bekommt Antwort (die sie dann z.B. irgendwo speichern könnte)
+- böse Seite schickt API Anfrage an Backend des Forums (mit dem Login-Cookie) und bekommt Antwort (die sie dann z.B. irgendwo speichern könnte)
 
 - richtig gesetzte CORS Header (oder die defaults)
 
@@ -70,7 +70,7 @@ Beispiel
 # Wozu ist das wichtig? z.B. CSRF(CWE-352)
 
   - Nutzer geht wieder auf Forum und loggt sich ein
-  - API Server hat Cors schutz an
+  - API Server hat CORS-Schutz an
   - Nutzer besucht böse Seite
   - Böse Seite schickt "einfachen" POST request an Forum
   - Request verändert Zustand (auch wenn die Antwort dann durch CORS blockiert wird)
@@ -81,6 +81,16 @@ Beispiel
 
 # Übungen
 
-- 1. Übung
-- 2. Übung(a)
+#### url
+https://github.com/thjmark/browser-header-security
+
+#### Starten mit
+
+cd demo
+npm install
+npm run start:all
+
+# TODO
+- 1. Übung (am besten nach dem Lösen resetten)
+- 2. Übung(a) Löse CSRF mit CORS Headern
 
