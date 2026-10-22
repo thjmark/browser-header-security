@@ -1,4 +1,3 @@
-
 ---
 
 # Sicherheitsprobleme von Webapps

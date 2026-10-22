@@ -1,4 +1,3 @@
-
 ---
 
 # Same Origin Policy
@@ -70,17 +69,15 @@ Beispiel
 
 ---
 
----
-
 # Wozu ist das wichtig? z.B. CSRF(CWE-352)
 
   - Nutzer geht wieder auf Forum und loggt sich ein
   - API Server hat Cors schutz an
   - Nutzer besucht böse Seite
-  - Böse seite schickt "einfachen" POST request an Forum
-  - request verändert zustand (auch wenn die Antwort dann durch CORS blockiert wird)
+  - Böse Seite schickt "einfachen" POST request an Forum
+  - Request verändert Zustand (auch wenn die Antwort dann durch CORS blockiert wird)
 
-  - richtig gesetzte CORS header verhindern über OPTIONS preflight viele POST requests s.o.
+  - richtig gesetzte CORS Header verhindern über OPTIONS preflight viele POST requests s.o.
 
 ---
 

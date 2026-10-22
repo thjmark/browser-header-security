@@ -20,8 +20,10 @@ duration: 70min
 src: ./pages/intro.md
 hide: false
 ---
+---
 src: ./pages/sop_cors.md
 hide: false
+---
 ---
 src: ./pages/cookies.md
 hide: false
@@ -30,9 +32,8 @@ hide: false
 src: ./pages/csp.md
 hide: false
 ---
+---
 src: ./pages/sonstiges.md
 hide: false
 ---
-
-
 

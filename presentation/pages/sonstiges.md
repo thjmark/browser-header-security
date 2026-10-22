@@ -1,5 +1,3 @@
-
-
 ---
 
 # Sonstige Header mit Security Bezug 1
@@ -23,8 +21,8 @@
 
 - HTTPS
   - Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  - blocks all non encrypted traffic
-  - status is stored in browser (can be sniffed i.e. can lead to data leaks)
+    - blocks all non encrypted traffic
+    - status is stored in browser (can be sniffed i.e. can lead to data leaks)
 
 - Sonstiges
   - Cache-Control 
@@ -51,14 +49,14 @@ JS-API die Cross origin isolation brauchen (sonst abgeschaltet)
 - Performance.now()
 - Performance.measureUserAgentSpecificMemory() 
 
-Externe High-performance frameworks/web apps
+Externe High-Performance Frameworks/Web apps
 
 ---
 
 # Cross Origin Isolation Header 
 
 ### COOP
-- Damit tabs keinen Kontext teilen(What it is: COOP controls how your page relates to other tabs or windows.)
+- Damit tabs keinen Kontext teilen
 - Cross-Origin-Opener-Policy: same-origin
 
 ### COEP
@@ -88,7 +86,8 @@ Aufmerksamkeit lohnt sich!
 
 
 ---
-# Quellen
+
+# Quellen 1
 
 #### CORS
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
@@ -104,6 +103,9 @@ Aufmerksamkeit lohnt sich!
 ##### Trusted types
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for
 
+
+---
+# Quellen 2
 #### Security Header
 - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
 - https://www.leviathansecurity.com/blog/the-double-edged-sword-of-hsts-persistence-and-privacy

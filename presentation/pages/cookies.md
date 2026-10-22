@@ -1,4 +1,3 @@
-
 ---
 layout: two-cols-header
 ---
@@ -44,15 +43,16 @@ layout: two-cols-header
 
 ## Wogegen das noch schützt: Data leaks
   Beispiel:
-  - in Forum in den posts Bilder eingebunden werden und es gibt xss
+  - in Forum gibt es XSS Lücke
   - die Cookies sind über js erreichbar
-  - Angreifer kann auf Forum Bild auf bösem Server posten. Über extra Path parameter kann z.B. der Cookie angehängt wird
+  - Angreifer kann auf Forum Javascript Code einbinden das den Logincookie ausliest und ihn (z.B. über Bildlink) an den bösem Server weiterleitet.
+  - User besucht das Forum, der JS-Code wird ausgelesen und der Cookie gestohlen
   - HttpOnly Cookies sind so nicht auslesbar
 
 ---
 
 # Übungen
-- Übung2
+- Übung 2
 - Übung 3(a)
 
 ---

@@ -1,4 +1,3 @@
-
 ---
 
 ## Content Security Policy
@@ -44,7 +43,8 @@ Grundlegende Struktur z.B.:
 
 
 Konfiguration kann sehr kompliziert sein!
- -  Content-Security-Policy-Report-Only Fehler loggen aber nicht blocken
+
+Zum Debuggen: `Content-Security-Policy-Report-Only` Fehler loggen aber nicht blocken
 
 ---
 # CSP Trusted types
@@ -65,7 +65,7 @@ Trusted types
 ### Allgemein
 Im Moment wird empfohlen das dies nicht der einzige Cross Site Scripting  Schutz ist (defense in depth)
 - immer `upgrade-insecure-requests wenn möglich
-- setzen über Header
+- CSP setzen über Header
 
 ### Je nach Anwendung
 - nur Lokal: self
